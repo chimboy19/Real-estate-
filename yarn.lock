@@ -1215,7 +1215,7 @@ regexp.prototype.flags@^1.5.2:
 
 remix@^2.12.1:
   version "2.12.1"
-  resolved "https://registry.npmjs.org/remix/-/remix-2.12.1.tgz"
+  resolved "https://registry.yarnpkg.com/remix/-/remix-2.12.1.tgz#0423e6cf525534a5a1b07961cc506c9053b7cd7c"
   integrity sha512-rzoHUO8cLAKv5awM4ilX8Xu8agXBR1fNfIxmLkUp+9I3xcQRMiYezrsyv4Jwg0cZ19amq79Eu/OLBxSIVaOaHQ==
 
 rollup@^3.27.1:
