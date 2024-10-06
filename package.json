@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "remix build",
+    "start": "remix-serve build",
     "preview": "vite preview"
   },
   "dependencies": {
