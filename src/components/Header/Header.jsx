@@ -1,22 +1,29 @@
-import React, { useState } from 'react'
-import './Header.css'
-import { BiMenuAltRight } from 'react-icons/bi'
-import OutsideClickHandler from 'react-outside-click-handler'
+import React, { useState } from "react";
+import "./Header.css";
+import { BiMenuAltRight } from "react-icons/bi";
+import OutsideClickHandler from "react-outside-click-handler";
+import { useNavigate } from "react-router-dom";
 const Header = () => {
-  const [menuOpened, setMenuOpen] = useState(false)
+  const [menuOpened, setMenuOpen] = useState(false);
   const getMenuStyles = (menuOpened) => {
-    if (document.documentElement.clientWidth <=800){
-      return { right:!menuOpened && '-100%'}
+    if (document.documentElement.clientWidth <= 800) {
+      return { right: !menuOpened && "-100%" };
     }
-  }
+  };
+
+  const navigate = useNavigate();
+
   return (
     <section className="h-wrapper">
       <div className=" flexCenter paddings innerWidth  h-container">
         <img src="./logo.png" alt="logo" width={100} />
         <OutsideClickHandler
-        onOutsideClick={()=>{setMenuOpen(false)}}> 
+          onOutsideClick={() => {
+            setMenuOpen(false);
+          }}
+        >
           <div className="h-menu flexCenter " style={getMenuStyles(menuOpened)}>
-            <a href="">Residences</a>
+            <p onClick={() => navigate("/login")}>Residences</p>
             <a href="">Our values</a>
             <a href="">Contacts Us</a>
             <a href="">Get started</a>
@@ -33,7 +40,6 @@ const Header = () => {
       </div>
     </section>
   );
-}
+};
 
-export default Header
-
+export default Header;
